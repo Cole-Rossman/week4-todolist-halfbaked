@@ -11,7 +11,8 @@ export async function createTodo(description) {
 }
 
 export async function deleteAllTodos() {
-    const response = await client.from('todos').delete().match({ user_id: getUser().id });
+    const user = client.auth.user().id;
+    const response = await client.from('todos').delete().match({ user_id: user });
 
     return checkError(response);
 }
