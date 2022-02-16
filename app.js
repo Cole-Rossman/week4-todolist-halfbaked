@@ -4,6 +4,8 @@ import {
     signupUser,
 } from './fetch-utils.js';
 
+import { renderTodo } from './render-utils.js';
+
 const signInForm = document.getElementById('sign-in');
 const signInEmail = document.getElementById('sign-in-email');
 const signInPassword = document.getElementById('sign-in-password');
