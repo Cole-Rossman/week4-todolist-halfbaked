@@ -30,11 +30,6 @@ export async function completeTodo(id) {
     return checkError(response);
 }
 
-export async function fetchTodos() {
-    const resp = await client.from('todos').select('*').order('id');
-    return checkError(resp);
-}
-
 export async function getUser() {
     return client.auth.session();
 }
